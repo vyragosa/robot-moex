@@ -16,3 +16,6 @@
 ## Инструкции по запуску проекта
 1. Установите необходимые библиотеки, запустив команду `pip install -r requirements.txt`.
 2. Запустите файл `main.py`.
+
+## Видео с демонстрацией работы робота
+[Ссылка на видео](https://drive.google.com/file/d/12q_oJVUo2-f1j2j2FRQv9FTQNAfodo0P/view?usp=sharing)
