@@ -1,5 +1,6 @@
 from datetime import datetime
 import pandas as pd
+import logging
 
 import src.MailActivity as mail_act
 import src.OSActivity as OS_act
@@ -110,6 +111,6 @@ class RobotMOEX():
             tableUSD, tableJPY = self._prepare_data()
             self._main_activity(tableUSD, tableJPY)
         except Exception as e:
-            print(e)
+            logging.error(e)
         finally:
             self.shutdown()
