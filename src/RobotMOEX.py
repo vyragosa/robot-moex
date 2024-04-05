@@ -1,6 +1,7 @@
-from datetime import datetime
-import pandas as pd
 import logging
+from datetime import datetime
+
+import pandas as pd
 
 import src.MailActivity as mail_act
 import src.OSActivity as OS_act
@@ -50,8 +51,8 @@ class RobotMOEX():
         self.browser_act.click('//body//header/div[5]/div[2]/div/div/div/ul/li[2]/a')  # клик по Срочный рынок
 
         if self.browser_act.element_exists(
-                '//div[2]/div/div/div/div[@class="disclaimer"]/div[2]'):  # Проверка на всплывающее окно с ПС
-            self.browser_act.click(r'//div[2]/div/div/div/div/div[1]/div[@class="disclaimer__buttons"]/a',
+                '//div[2]/div/div/div/div[@class="disclaimer"]/div[2]', ):  # Проверка на всплывающее окно с ПС
+            self.browser_act.click(r'//div[2]/div/div/div/div/div[1]/div[@class="disclaimer__buttons"]/a', timeout=10,
                                    wait_for_ready=False)  # Клик по согласен
         self.browser_act.click(
             r'//div[@class="left-menu__dropdown "]//a[@href="/ru/derivatives/currency-rate.aspx?currency=USD_RUB"]')  # клик по индикативные курсы

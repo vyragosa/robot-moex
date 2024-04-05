@@ -9,7 +9,8 @@ def send_mail(to: str, subject: str, body: str, attachment: str) -> None:
     :param body: Содержимое письма
     :param attachment: Вложения письма
     """
-    outlook = win32.Dispatch('outlook.application')
+    print("Opening outlook...")
+    outlook = win32.Dispatch('outlook.application') # могут быть ошибки с запуском. Зависит от версии outlook.
     mail = outlook.CreateItem(0)
     mail.To = to
     mail.Subject = subject
