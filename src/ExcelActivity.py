@@ -39,7 +39,7 @@ class ExcelActivity:
 
     def autofit(self) -> None:
         """
-        Атоширина ячеек в файле Excel
+        Автоширина ячеек в файле Excel
         """
         dims = {}
         for row in self.sheet.rows:
