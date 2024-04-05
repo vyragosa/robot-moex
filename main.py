@@ -1,6 +1,10 @@
 from src import RobotMOEX
 
 
-if __name__ == "__main__":
+def run():
     robot = RobotMOEX()
     robot.run()
+
+
+if __name__ == "__main__":
+    run()
